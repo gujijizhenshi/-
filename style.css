@@ -52,4 +52,13 @@ button {
 ---------------------------*/
 button:hover {
   background-color: #ff3300; /* 滑鼠移到按鈕上時，背景顏色變深橘色 */
+
+   /* 整個網頁背景圖片 */
+  background-image: url('images/bg.jpg'); /* 設定背景圖片 */
+  background-size: cover;                  /* 讓圖片覆蓋整個頁面，不留空白 */
+  background-position: center;             /* 置中對齊 */
+  background-repeat: no-repeat;            /* 不重複圖片 */
+  font-family: 'Roboto', sans-serif;       /* 其他原本的設定也可以加上 */
+
 }
+
