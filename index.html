@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>LIFF Game Demo</title>
+  <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+</head>
+<body>
+  <h1>古蹟急診室</h1>
+  <button id="btn">顯示使用者資訊</button>
+
+  <p id="profile"></p>
+
+  <script>
+    async function main() {
+      // 這裡換成你的 LIFF ID
+      await liff.init({ liffId: 2008215037-9DDXW8rd});
+
+      // 檢查登入
+      if (!liff.isLoggedIn()) {
+        liff.login();
+      }
+
+      // 綁定按鈕
+      document.getElementById("btn").onclick = async () => {
+        const profile = await liff.getProfile();
+        document.getElementById("profile").innerText =
+          `Hello, ${profile.displayName}!`;
+      };
+    }
+    main();
+  </script>
+</body>
+</html>
