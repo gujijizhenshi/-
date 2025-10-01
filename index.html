@@ -1,37 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>LIFF Game Demo</title>
-  <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+  <meta charset="UTF-8">
+  <title>我的 LIFF Demo</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google 字體 -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>古蹟急診室</h1>
-  <button id="btn">顯示使用者資訊</button>
+  <h1>歡迎來到我的 LIFF 網頁！</h1>
+  <p>這是一個簡單範例頁面</p>
 
-  <p id="profile"></p>
-<h1>Hello, LIFF!</h1>
+  <!-- 插入圖片 -->
+  <img src="images/my-image.png" alt="我的設計圖片" width="300">
 
-  
-  <script>
-    async function main() {
-      // 這裡換成你的 LIFF ID
-      await liff.init({ liffId: 2008215037-9DDXW8rd});
-
-      // 檢查登入
-      if (!liff.isLoggedIn()) {
-        liff.login();
-      }
-
-      // 綁定按鈕
-      document.getElementById("btn").onclick = async () => {
-        const profile = await liff.getProfile();
-        document.getElementById("profile").innerText =
-          `Hello, ${profile.displayName}!`;
-      };
-    }
-    main();
-  </script>
+  <!-- 按鈕示範 -->
+  <button onclick="alert('你點了我！')">點我</button>
 </body>
 </html>
 
