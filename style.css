@@ -62,3 +62,23 @@ button:hover {
 
 }
 
+/* 導航列樣式 */
+nav {
+  background-color: #ff6600;  /* 橘色背景 */
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+nav a {
+  color: white;               /* 白色文字 */
+  text-decoration: none;      /* 去掉底線 */
+  margin: 0 15px;             /* 左右間距 */
+  font-weight: bold;
+  font-size: 16px;
+}
+
+nav a:hover {
+  color: #ffcc99;             /* 滑鼠移上去變淺橘色 */
+}
