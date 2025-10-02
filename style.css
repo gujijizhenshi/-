@@ -82,3 +82,21 @@ nav a {
 nav a:hover {
   color: #ffcc99;             /* 滑鼠移上去變淺橘色 */
 }
+
+a.btn {
+  display: inline-block;           /* 讓 <a> 表現得像按鈕區塊 */
+  background-color: #ff6600;       /* 橘色背景 */
+  color: white;                    /* 白色文字 */
+  text-decoration: none;           /* 移除底線 */
+  padding: 12px 24px;              /* 上下左右的內距 */
+  margin: 10px;                    /* 每個按鈕之間的間距 */
+  border-radius: 8px;              /* 圓角 */
+  font-size: 16px;                 /* 字體大小 */
+  transition: background-color 0.3s; /* 增加滑鼠移入時的動畫 */
+}
+
+/* hover 效果：滑鼠移到按鈕上會變深橘 */
+a.btn:hover {
+  background-color: #ff3300;
+}
+
