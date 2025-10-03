@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <!-- 設定網頁在手機、平板上可以自動調整大小 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>鳳山龍山寺</title>
+  <!-- 引入外部 CSS 樣式 -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game-container">
+    <!-- 開場圖片，遊戲開始前顯示的封面 -->
+    <img src="images/cover.jpg" alt="遊戲封面" style="max-width:100%; border-radius:12px;">
+
+    <!-- 開始遊戲按鈕 -->
+    <button id="start-btn">開始穿越</button>
+
+    <!-- 劇情顯示區塊（預設隱藏，等玩家按下開始後才出現） -->
+    <div id="story" style="display:none;">
+      <p id="story-text"></p> <!-- 劇情文字會顯示在這裡 -->
+      <button id="next-btn" style="display:none;">下一步</button> <!-- 用來切換到下一段劇情 -->
+    </div>
+
+    <!-- 答題區（預設隱藏，等劇情跑完後才顯示） -->
+    <div id="quiz" style="display:none;">
+      <p id="question"></p> <!-- 題目文字 -->
+      <div id="options"></div> <!-- 放選項按鈕 -->
+    </div>
+
+    <!-- 結局畫面（預設隱藏，答對題目後才顯示） -->
+    <div id="ending" style="display:none;">
+      <h2>🎉 恭喜你回到未來！</h2>
+      <img src="images/ending.png" alt="實習證明" style="max-width:300px;">
+      <p>你獲得了實習證明！</p>
+    </div>
+  </div>
+
+  <!-- 引入遊戲邏輯（JavaScript） -->
+  <script src="game.js"></script>
+</body>
+</html>
