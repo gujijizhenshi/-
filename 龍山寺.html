@@ -9,12 +9,21 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="game-container">
-    <!-- 開場圖片，遊戲開始前顯示的封面 -->
-    <img src="images/cover.jpg" alt="遊戲封面" style="max-width:100%; border-radius:12px;">
+  <!-- 起始畫面 -->
+<div id="intro">
+  <img src="your-image.jpg" alt="時空之門" width="300">
+  <br>
+  <button onclick="startStory()">開始穿越</button>
+</div>
 
-    <!-- 開始遊戲按鈕 -->
-    <button id="start-btn">開始穿越</button>
+<!-- 劇情畫面 -->
+<div id="story" style="display:none;">
+  <p>你穿越到過去，開始冒險... （這裡可以放劇情文字）</p>
+  <button onclick="startQuestions()">進入挑戰</button>
+  <button id="next-btn" style="display:none;">下一步</button> <!-- 用來切換到下一段劇情 -->
+</div>
+
+  <div id="game-container">
 
     <!-- 劇情顯示區塊（預設隱藏，等玩家按下開始後才出現） -->
     <div id="story" style="display:none;">
