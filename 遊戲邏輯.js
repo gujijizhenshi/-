@@ -54,11 +54,6 @@ function showStory() {
   nextBtn.style.display = "block";
 }
 
-function startStory() {
-  document.getElementById("intro").style.display = "none"; // 隱藏起始畫面
-  document.getElementById("story").style.display = "block"; // 顯示劇情畫面
-}
-
 
 // 劇情進度
 nextBtn.onclick = () => {
