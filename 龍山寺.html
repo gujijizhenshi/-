@@ -24,15 +24,20 @@
     </div>
 
  
+<div id="nav" style="display:none;">
+  <button onclick="showPage('law')">📜 法規</button>
+  <button onclick="showPage('history')">🏛️ 歷史</button>
+  <button onclick="showPage('maintenance')">🛠️ 維護管理</button>
+</div>
+
+<!-- 分頁內容 -->
+<div id="law" class="page" style="display:none;">...</div>
+<div id="history" class="page" style="display:none;">...</div>
+<div id="maintenance" class="page" style="display:none;">...</div>
 
 <div id="game-container">
 
-  <!-- 導覽按鈕 -->
-  <div id="nav">
-    <button onclick="showPage('law')">📜 法規</button>
-    <button onclick="showPage('history')">🏛️ 歷史</button>
-    <button onclick="showPage('maintenance')">🛠️ 維護管理</button>
-  </div>
+
 
   <!-- 法規分頁 -->
   <div id="law" class="page">
