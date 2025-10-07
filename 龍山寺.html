@@ -2,44 +2,43 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
-  <!-- 設定網頁在手機、平板上可以自動調整大小 -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>鳳山龍山寺</title>
-  <!-- 引入外部 CSS 樣式 -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- 劇情畫面 -->
-<div id="story" style="display:none;">
-  <p>你穿越到過去，開始冒險... （這裡可以放劇情文字）</p>
-  <button onclick="startQuestions()">開始穿越</button>
-  <button id="next-btn" style="display:none;">下一步</button> <!-- 用來切換到下一段劇情 -->
-</div>
-
   <div id="game-container">
 
-    <!-- 劇情顯示區塊（預設隱藏，等玩家按下開始後才出現） -->
+    <!-- 🎬 開始畫面 -->
+    <div id="intro">
+      <h2>🌀 鳳山龍山寺 · 穿越之旅</h2>
+      <p>你準備好展開一場跨越時空的冒險了嗎？</p>
+      <button id="start-btn">開始穿越</button>
+    </div>
+
+    <!-- 📖 劇情畫面（預設隱藏） -->
     <div id="story" style="display:none;">
-      <p id="story-text"></p> <!-- 劇情文字會顯示在這裡 -->
-      <button id="next-btn" style="display:none;">下一步</button> <!-- 用來切換到下一段劇情 -->
+      <p id="story-text"></p>
+      <button id="next-btn" style="display:none;">下一步</button>
     </div>
 
-    <!-- 答題區（預設隱藏，等劇情跑完後才顯示） -->
+    <!-- ❓ 題目畫面（預設隱藏） -->
     <div id="quiz" style="display:none;">
-      <p id="question"></p> <!-- 題目文字 -->
-      <div id="options"></div> <!-- 放選項按鈕 -->
+      <p id="question"></p>
+      <div id="options"></div>
+      <p id="law" style="display:none;"></p> <!-- 顯示法規說明 -->
     </div>
 
-    <!-- 結局畫面（預設隱藏，答對題目後才顯示） -->
+    <!-- 🎉 結局畫面（預設隱藏） -->
     <div id="ending" style="display:none;">
       <h2>🎉 恭喜你回到未來！</h2>
       <img src="images/ending.png" alt="實習證明" style="max-width:300px;">
       <p>你獲得了實習證明！</p>
     </div>
+
   </div>
 
-  <!-- 引入遊戲邏輯（JavaScript） -->
   <script src="遊戲邏輯.js"></script>
 </body>
 </html>
