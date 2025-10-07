@@ -19,11 +19,13 @@ const storyLines = [
   "要解開這個謎題，你必須回答問題！"
 ];
 
-// 預設顯示的分頁
-function showPage(pageId) {
-  document.querySelectorAll('.page').forEach(page => page.style.display = 'none');
-  document.getElementById(pageId).style.display = 'block';
+
+// 劇情結束後顯示分頁
+function showGameTabs() {
+  document.getElementById('nav').style.display = 'block';        // 顯示按鈕
+  document.getElementById('maintenance').style.display = 'block'; // 顯示維護管理頁
 }
+
 
 // 檢查玩家答案
 function checkAnswer() {
