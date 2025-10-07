@@ -100,3 +100,36 @@ a.btn:hover {
   background-color: #ff3300;
 }
 
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  background-color: #fdf6ec;
+  text-align: center;
+  padding: 20px;
+}
+
+button {
+  background-color: #c49a6c;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #a87f52;
+}
+
+.page {
+  margin-top: 20px;
+  padding: 10px;
+}
+
+#quiz input {
+  padding: 8px;
+  width: 60%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
