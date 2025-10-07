@@ -11,7 +11,7 @@ const lawEl = document.getElementById("law");           // 法規說明
 const endingDiv = document.getElementById("ending");    // 結局畫面
 
 // === 📜 劇情設定 ===
-let storyIndex = 0; // 劇情進度
+let storyIndex = 0;
 const storyLines = [
   "你穿越到了古代，眼前是一座神秘的古蹟……",
   "在探索的過程中，你發現了一些奇怪的符號。",
@@ -19,12 +19,18 @@ const storyLines = [
   "要解開這個謎題，你必須回答問題！"
 ];
 
+const storyText = document.getElementById('story-text');
+const nextBtn = document.getElementById('next-btn');
 
-// 劇情結束後顯示分頁
-function showGameTabs() {
-  document.getElementById('nav').style.display = 'block';        // 顯示按鈕
-  document.getElementById('maintenance').style.display = 'block'; // 顯示維護管理頁
-}
+nextBtn.onclick = () => {
+  storyText.textContent = storyLines[storyIndex];
+  storyIndex++;
+  if (storyIndex >= storyLines.length) {
+    // 劇情結束 → 顯示分頁
+    document.getElementById('story').style.display = 'none';
+    showGameTabs();
+  }
+};
 
 
 // 檢查玩家答案
