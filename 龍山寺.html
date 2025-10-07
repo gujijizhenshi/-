@@ -23,12 +23,44 @@
       <button id="next-btn" style="display:none;">下一步</button>
     </div>
 
-    <!-- ❓ 題目畫面（預設隱藏） -->
-    <div id="quiz" style="display:none;">
-      <p id="question"></p>
-      <div id="options"></div>
-      <p id="law" style="display:none;"></p> <!-- 顯示法規說明 -->
-    </div>
+   // 預設顯示的分頁
+function showPage(pageId) {
+  document.querySelectorAll('.page').forEach(page => page.style.display = 'none');
+  document.getElementById(pageId).style.display = 'block';
+}
+
+// 檢查玩家答案
+function checkAnswer() {
+  const input = document.getElementById("answer").value.trim();
+  const feedback = document.getElementById("feedback");
+
+  if (input === "歷史文化保存") {
+    feedback.textContent = "✅ 答對了！你解鎖了新內容！";
+
+    // 解鎖法規內容
+    document.getElementById("law-content").innerHTML = `
+      <p>《文化資產保存法》第1條：</p>
+      <blockquote>文化資產應予保存，以延續歷史文化。</blockquote>
+    `;
+
+    // 同時可解鎖歷史內容
+    document.getElementById("history-content").innerHTML = `
+      <p>鳳山龍山寺建於清代，是地方信仰與文化的重要象徵。</p>
+    `;
+
+    // 顯示結局按鈕
+    feedback.innerHTML += `<br><button onclick="showPage('ending')">回到未來</button>`;
+
+  } else {
+    feedback.textContent = "❌ 再想想看喔～";
+  }
+}
+
+// 回首頁（假設首頁是 index.html）
+function goHome() {
+  window.location.href = "index.html";
+}
+
 
    <!-- 🎉 結局畫面（預設隱藏） -->
 <div id="ending" style="display:none;">
