@@ -19,28 +19,44 @@ const storyLines = [
   "要解開這個謎題，你必須回答問題！"
 ];
 
-// === ❓ 題目設定 ===
-let currentQuestion = 0;
-const quizData = [
-  {
-    question: "問題 1：下列哪一項是古蹟保護的主要目的？",
-    options: ["娛樂觀光", "歷史文化保存", "商業開發"],
-    answer: "歷史文化保存",
-    law: "📜《文化資產保存法》第1條：文化資產應予保存，以延續歷史文化。"
-  },
-  {
-    question: "問題 2：如果要修繕古蹟，應該怎麼做？",
-    options: ["自行施工", "報請主管機關核准", "直接拆除"],
-    answer: "報請主管機關核准",
-    law: "📜《文化資產保存法》第27條：古蹟之修復須經主管機關同意。"
-  },
-  {
-    question: "問題 3：考古出土文物應該？",
-    options: ["私下收藏", "立即申報", "隨意丟棄"],
-    answer: "立即申報",
-    law: "📜《文化資產保存法》第50條：出土文物應立即申報，歸國家所有。"
+// 預設顯示的分頁
+function showPage(pageId) {
+  document.querySelectorAll('.page').forEach(page => page.style.display = 'none');
+  document.getElementById(pageId).style.display = 'block';
+}
+
+// 檢查玩家答案
+function checkAnswer() {
+  const input = document.getElementById("answer").value.trim();
+  const feedback = document.getElementById("feedback");
+
+  if (input === "歷史文化保存") {
+    feedback.textContent = "✅ 答對了！你解鎖了新內容！";
+
+    // 解鎖法規內容
+    document.getElementById("law-content").innerHTML = `
+      <p>《文化資產保存法》第1條：</p>
+      <blockquote>文化資產應予保存，以延續歷史文化。</blockquote>
+    `;
+
+    // 同時可解鎖歷史內容
+    document.getElementById("history-content").innerHTML = `
+      <p>鳳山龍山寺建於清代，是地方信仰與文化的重要象徵。</p>
+    `;
+
+    // 顯示結局按鈕
+    feedback.innerHTML += `<br><button onclick="showPage('ending')">回到未來</button>`;
+
+  } else {
+    feedback.textContent = "❌ 再想想看喔～";
   }
-];
+}
+
+// 回首頁（假設首頁是 index.html）
+function goHome() {
+  window.location.href = "index.html";
+}
+
 
 // === 🚀 開始遊戲 ===
 startBtn.onclick = () => {
