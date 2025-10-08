@@ -133,3 +133,60 @@ button:hover {
   border: 1px solid #ccc;
 }
 
+/* === 📲 響應式設定（行動裝置與平板） === */
+
+/* 平板與中型螢幕（最大寬度 768px） */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  button {
+    width: 80%;
+    font-size: 1rem;
+    padding: 10px 16px;
+  }
+
+  #story, #quiz, #law, #history, #maintenance, #ending {
+    width: 90%;
+    margin: 0 auto;
+    padding: 15px;
+  }
+
+  #story-text, #question {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
+
+/* 手機小螢幕（最大寬度 480px） */
+@media (max-width: 480px) {
+  h1, h2 {
+    font-size: 1.2rem;
+  }
+
+  button {
+    width: 90%;
+    font-size: 0.95rem;
+    padding: 12px;
+    border-radius: 10px;
+  }
+
+  input[type="text"] {
+    width: 90%;
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  #story-text, #question {
+    font-size: 0.9rem;
+  }
+
+  #game-container {
+    padding: 10px;
+  }
+}
+
+
+
