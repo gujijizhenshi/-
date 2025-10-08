@@ -45,6 +45,9 @@ button {
   cursor: pointer;           /* 滑鼠移到按鈕時顯示手指圖示 */
   border-radius: 8px;        /* 按鈕圓角 8px */
   font-size: 16px;           /* 按鈕文字大小 16px */
+   touch-action: manipulation;
+-webkit-tap-highlight-color: transparent;
+
 }
 
 /* --------------------------
@@ -187,6 +190,7 @@ button:hover {
     padding: 10px;
   }
 }
+
 
 
 
