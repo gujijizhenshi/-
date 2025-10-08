@@ -130,6 +130,24 @@ function checkAnswer(answer) {
     alert("答錯了！再想想看！");
   }
 }
+// 選擇題題目
+const questions = [
+  {
+    question: "鳳山龍山寺建於哪個時期？",
+    options: ["清朝", "日治時期", "民國初年"],
+    answer: "清朝"
+  },
+  {
+    question: "龍山寺主要供奉的神祇是？",
+    options: ["觀音菩薩", "媽祖", "關聖帝君"],
+    answer: "觀音菩薩"
+  },
+  {
+    question: "龍山寺現今位於哪個縣市？",
+    options: ["高雄市", "台南市", "屏東縣"],
+    answer: "高雄市"
+  }
+];
 
 // === 🏁 顯示結局 ===
 function showEnding() {
